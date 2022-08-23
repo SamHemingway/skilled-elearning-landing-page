@@ -1,0 +1,80 @@
+@import '../_functions.scss';
+
+.card-stack {
+	background: var(--gradient-background);
+	padding-block-end: 5rem;
+}
+
+.cards {
+	list-style: none;
+	padding-inline-start: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	inline-size: calculateLinearInterpolation(21.4375, 69.375);
+	margin-inline: auto;
+	gap: 2.5rem;
+	margin-block-start: 0;
+}
+
+.cards__element {
+	padding-inline: 2rem;
+	padding-block-start: calculateLinearInterpolation(3.5, 4);
+	padding-block-end: calculateLinearInterpolation(2, 2.5, 48);
+	background: var(--clr-primary-100);
+	border-radius: calculateLinearInterpolation(0.625, 0.9375, 48);
+	position: relative;
+	flex-direction: column;
+	block-size: calculateLinearInterpolation(16.1875, 20.125, 48);
+	border: solid hsla(234, 100%, 97%, 1) 1px;
+}
+
+.cards__element--strong {
+	background: var(--clr-strong);
+	color: var(--clr-primary-100);
+	padding-block: calculateLinearInterpolation(1.5, 4);
+	min-width: 100%;
+	min-height: 100%;
+	
+	@media (max-width: 48rem) {
+		block-size: 7.5rem;	
+	}
+}
+
+.cards__element::before {
+	position: absolute;
+	top: -24px;
+}
+
+@for $i from 2 through 6 {
+  .cards__element:nth-child(#{$i})::before {
+	  $iconNumber: $i - 1;
+	content: url(../../assets/icon-card-#{$iconNumber}.svg);
+  }
+}
+
+.card-header {
+	margin-block-end: calculateLinearInterpolation(1, 1.5, 48);
+}
+
+.card-body {
+	margin-block-end: calculateLinearInterpolation(1, 1.5, 48);
+}
+
+.text-link {
+	text-decoration: none;
+	color: var(--clr-secondary-500);
+	font-weight: var(--fw-bold);
+	margin-block-start: auto;
+	
+	&:hover {
+		color: var(--clr-secondary-300);
+	  }
+}
+
+@media (min-width: 48rem) {
+
+	.cards {
+		column-gap: calculateLinearInterpolation(0.75, 1.875, 48);
+		row-gap: calculateLinearInterpolation(3.5, 5, 48);
+	}
+}

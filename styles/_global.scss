@@ -1,0 +1,65 @@
+@import '_functions.scss';
+
+body {
+  font-family: var(--ff-primary);
+}
+
+.upper {
+  inline-size: calculateLinearInterpolation(21.4375, 69.375);
+  margin-inline: auto;
+
+}
+
+.logo {
+  max-width: calculateLinearInterpolation(5.625, 7.125, 23.4375, 40);
+}
+
+.cta {
+  display: block;
+  text-decoration: none;
+  line-height: var(--lh-xs);
+  color: var(--clr-primary-100);
+  background: var(--clr-primary-700);
+  padding-inline: var(--g-sm);
+  padding-block: 0.77em;
+  border-radius: var(--rad-md);
+  font-weight: var(--fw-bold);
+  font-size: calculateLinearInterpolation(1, 1.125, 40);
+  inline-size: fit-content;
+
+  &:hover {
+    background: var(--clr-primary-500);
+  }
+
+}
+
+p {
+  color: var(--clr-primary-400);
+  font-size: calculateLinearInterpolation(1, 1.125, 40);
+}
+
+h2 {
+  font-size: calculateLinearInterpolation(1.5, 2, 40);
+}
+
+@media (min-width: 48rem) {
+
+  body {
+    background: url('../../assets/image-hero-tablet@2x.png');
+    background: url('../../assets/image-hero-tablet@2x.webp');
+    background-size: calculateLinearInterpolation(40, 62.5, 48);
+    background-repeat: no-repeat;
+    background-position: left 52vw top -9vw;
+  }
+}
+
+@media (min-width: 90rem) {
+
+  body {
+    background: url('../../assets/image-hero-desktop@2x.png');
+    background: url('../../assets/image-hero-desktop@2x.webp');
+    background-size: calculateLinearInterpolation(40, 62.5, 48);
+    background-repeat: no-repeat;
+    background-position: left 52vw top -9vw;
+  }
+}

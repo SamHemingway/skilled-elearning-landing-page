@@ -1,0 +1,10 @@
+@import '_functions.scss';
+
+.flex {
+  display: flex;
+}
+
+.container {
+  inline-size: calculateLinearInterpolation(21.4375, 69.375);
+  margin-inline: auto;
+}

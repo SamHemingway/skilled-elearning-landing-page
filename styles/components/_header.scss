@@ -1,0 +1,8 @@
+@import '../_functions.scss';
+
+header {
+	margin-block-start: calculateLinearInterpolation(1, 1.5, 23.4375, 48);
+	margin-block-end: calculateLinearInterpolation(2.375, 10.75);
+	justify-content: space-between;
+	align-items: center;
+}

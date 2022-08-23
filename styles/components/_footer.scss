@@ -1,0 +1,19 @@
+footer {
+	background: var(--clr-primary-700);
+	min-height: 7.5rem;
+	display: grid;
+	align-content: center;
+}
+
+.container__footer {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cta--strong-dark {
+	background: var(--clr-strong-secondary);
+	
+	&:hover {
+		background: var(--clr-strong-secondary-hover);
+	}
+}
