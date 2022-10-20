@@ -317,7 +317,6 @@ header {
   background: var(--clr-strong);
   color: var(--clr-primary-100);
   padding-block: clamp(1.5rem, 1.5rem + 2.5 * (100vw - 23.4375rem) / 66.5625, 4rem);
-  min-width: 100%;
   min-height: 100%;
 }
 @media (max-width: 48rem) {

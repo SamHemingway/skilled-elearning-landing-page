@@ -1,4 +1,4 @@
-@import '../_functions.scss';
+@import "../_functions.scss";
 
 .card-stack {
 	background: var(--gradient-background);
@@ -32,11 +32,10 @@
 	background: var(--clr-strong);
 	color: var(--clr-primary-100);
 	padding-block: calculateLinearInterpolation(1.5, 4);
-	min-width: 100%;
 	min-height: 100%;
-	
+
 	@media (max-width: 48rem) {
-		block-size: 7.5rem;	
+		block-size: 7.5rem;
 	}
 }
 
@@ -46,10 +45,10 @@
 }
 
 @for $i from 2 through 6 {
-  .cards__element:nth-child(#{$i})::before {
-	  $iconNumber: $i - 1;
-	content: url(../../assets/icon-card-#{$iconNumber}.svg);
-  }
+	.cards__element:nth-child(#{$i})::before {
+		$iconNumber: $i - 1;
+		content: url(../../assets/icon-card-#{$iconNumber}.svg);
+	}
 }
 
 .card-header {
@@ -65,14 +64,13 @@
 	color: var(--clr-secondary-500);
 	font-weight: var(--fw-bold);
 	margin-block-start: auto;
-	
+
 	&:hover {
 		color: var(--clr-secondary-300);
-	  }
+	}
 }
 
 @media (min-width: 48rem) {
-
 	.cards {
 		column-gap: calculateLinearInterpolation(0.75, 1.875, 48);
 		row-gap: calculateLinearInterpolation(3.5, 5, 48);
